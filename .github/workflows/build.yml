@@ -31,6 +31,7 @@ jobs:
         with:
           repository: qupath/qubalab
           ref: main
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
           path: qubalab
 
       - name: Set up python
