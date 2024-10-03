@@ -42,7 +42,7 @@ jobs:
         run: pip install ./qubalab[doc]
                 
       - name: Build documentation
-        run: sphinx-build -M html docs/ docs/_build/
+        run: sphinx-build -M html . _build/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -50,7 +50,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'docs/_build/html'
+          path: '_build/html'
 
       # - name: Deploy to GitHub Pages
       #   id: deployment
