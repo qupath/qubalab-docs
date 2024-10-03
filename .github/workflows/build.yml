@@ -38,8 +38,8 @@ jobs:
         id: setup-python
         uses: actions/setup-python@v5
 
-      - name: Install
-        run: pip install qubalab[doc]
+      - name: Install qubalab
+        run: pip install ./qubalab[doc]
                 
       - name: Build documentation
         run: sphinx-build -M html docs/ docs/_build/
